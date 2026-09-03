@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mayorca Vibes</title>
+    <link rel="stylesheet" href="css/roots.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body id="body" data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="0" tabindex="0">
+    <div id="navbar-container"></div>
+    
+    <section id="food" class="menu">
+      <h2 class="titulo-menu">Nuestras opciones</h2>
+        <ul class="nav justify-content-center gap-4 menu-tabs" id="menuTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="clasicos-tab" data-bs-toggle="tab" data-bs-target="#clasicos" type="button" role="tab">
+                    <img src="img/iconos/estrella-de-mar.png" alt="Clasicos" class="menu-icon">
+                    <span class="texto_platos">Clásicos</span>
+                </button>
+            </li>
+            
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ensaladas-tab" data-bs-toggle="tab" data-bs-target="#ensaladas" type="button" role="tab">
+                    <img src="img/iconos/ensalada.png" alt="Ensaladas" class="menu-icon">
+                    <span class="texto_platos">Ensaladas</span>
+                </button>
+            </li>
+            
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="delacasa-tab" data-bs-toggle="tab" data-bs-target="#delacasa" type="button" role="tab">
+                    <img src="img/iconos/sombrero-de-cocinero.png" alt="De la casa" class="menu-icon">
+                    <span class="texto_platos">De la casa</span>
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bocadillos-tab" data-bs-toggle="tab" data-bs-target="#bocadillos" type="button" role="tab">
+                    <img src="img/iconos/emparedado.png" alt="Bocadillos" class="menu-icon">
+                    <span class="texto_platos">Bocadillos</span>
+                </button>
+            </li>
+            
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="crujientes-tab" data-bs-toggle="tab" data-bs-target="#crujientes" type="button" role="tab">
+                    <img src="img/iconos/croquetas.png" alt="Crujientes" class="menu-icon">
+                    <span class="texto_platos">Crujientes</span>
+                </button>
+            </li>
+            
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mar-tab" data-bs-toggle="tab" data-bs-target="#mar" type="button" role="tab">
+                    <img src="img/iconos/cascara.png" alt="Del mar" class="menu-icon">
+                    <span class="texto_platos">Del mar</span>
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tierra-tab" data-bs-toggle="tab" data-bs-target="#tierra" type="button" role="tab">
+                    <img src="img/iconos/palmera-datilera.png" alt="De la tierra  " class="menu-icon">
+                    <span class="texto_platos">De la tierra</span>
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="postres-tab" data-bs-toggle="tab" data-bs-target="#postres" type="button" role="tab">
+                    <img src="img/iconos/pastel.png" alt="Postres" class="menu-icon">
+                    <span class="texto_platos">Postres</span>
+                </button>
+            </li>
+        </ul>
+
+    <div class="tab-content" id="menuTabContent">
+        <!-- ============================================= -->
+        <!-- CLÁSICOS -->
+        <!-- ============================================= -->
+        <div class="tab-pane fade show active" id="clasicos" role="tabpanel">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Pan, alioli y aceitunas</span>
+                        <span class="precio">3,80€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Patatas fritas</span>
+                        <span class="precio">6,00€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Patatas bravas</span>
+                        <span class="precio">6,50€</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Patatas golden (bacon y queso)</span>
+                        <span class="precio">8,00€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <div>
+                            <span><span class="bullet"></span>Tequeños (palitos de queso)</span>
+                            <div class="plato-desc">Crujientes palitos de masa rellenos de queso.</div>
+                        </div>
+                        <span class="precio">7,50€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- BOCADILLOS -->
+        <!-- ============================================= -->
+        <div class="tab-pane fade" id="bocadillos" role="tabpanel">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Bocadillo de Bacon y queso</span>
+                        <span class="precio">7,00€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Pa amb oli de jamón serrano y tomate</span>
+                        <span class="precio">8,00€</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Tostada de sobrasada, queso y miel</span>
+                        <span class="precio">8,50€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <div>
+                            <span><span class="bullet"></span>Sándwich Mixto Especial</span>
+                            <div class="plato-desc">Jamón, queso, pollo y patatas fritas.</div>
+                        </div>
+                        <span class="precio">11,50€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- FRITOS Y CRUJIENTES -->
+        <!-- ============================================= -->
+        <div class="tab-pane fade" id="crujientes" role="tabpanel">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Croquetas de jamón serrano o bacalao</span>
+                        <span class="precio">8,50€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Chicharrón (Torreznos)</span>
+                        <span class="precio">7,00€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Alitas de pollo</span>
+                        <span class="precio">8,50€</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Boquerones fritos</span>
+                        <span class="precio">9,00€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Calamar a la romana</span>
+                        <span class="precio">10,00€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Tostones Caribeños</span>
+                        <span class="precio">10,00€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ENSALADAS -->
+        <!-- ============================================= -->
+        <div class="tab-pane fade" id="ensaladas" role="tabpanel">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <div>
+                            <span><span class="bullet"></span>Ensalada Mediterránea</span>
+                            <div class="plato-desc">Pepino, olivas, tomate cherry, nueces y queso de cabra.</div>
+                        </div>
+                        <span class="precio">13,00€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <div>
+                            <span><span class="bullet"></span>Ensalada de Pollo</span>
+                            <div class="plato-desc">Lechuga, nueces, pepino y pollo a la plancha con vinagreta de miel y mostaza.</div>
+                        </div>
+                        <span class="precio">14,50€</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <div>
+                            <span><span class="bullet"></span>Ensalada Tropical</span>
+                            <div class="plato-desc">Mango fresco, gambas, nueces, pepino, acompañada de una suave vinagreta de miel y mostaza.</div>
+                        </div>
+                        <span class="precio">15,50€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- AROMAS DE LA TIERRA -->
+        <!-- ============================================= -->
+        <div class="tab-pane fade" id="tierra" role="tabpanel">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato plato-recomendado">
+                        <span><span class="bullet"></span><span class="badge-recomendado">Chorizo criollo</span></span>
+                        <span class="precio">8,50€</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Pimientos de Padrón</span>
+                        <span class="precio">8,50€</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Champiñones y setas al ajillo</span>
+                        <span class="precio">10,00€</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Huevos rotos (bacon o jamón serrano)</span>
+                        <span class="precio">10,00€</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Brochetas de cerdo</span>
+                        <span class="precio">12,00€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- ESPECIALIDADES DE LA CASA -->
+        <!-- ============================================= -->
+        <div class="tab-pane fade" id="delacasa" role="tabpanel">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato plato-recomendado">
+                        <span><span class="bullet"></span><span class="badge-recomendado">Bocadillo de Lechona</span></span>
+                        <span class="precio">7,00€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <div>
+                            <span><span class="bullet"></span>Hamburguesa Mallorca Vibes</span>
+                            <div class="plato-desc">Pan brioche, carne jugosa, lechuga, tomate, queso y bacon (200g).</div>
+                        </div>
+                        <span class="precio">12,00€</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <div>
+                            <span><span class="bullet"></span>Pulpo a la gallega</span>
+                            <div class="plato-desc">Patata, pimentón y aceite virgen (500g).</div>
+                        </div>
+                        <span class="precio">27,50€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- DEL MAR -->
+        <!-- ============================================= -->
+        <div class="tab-pane fade" id="mar" role="tabpanel">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato plato-recomendado">
+                        <span><span class="bullet"></span><span class="badge-recomendado">Gambas al ajillo</span></span>
+                        <span class="precio">13,00€</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Mejillones al vapor</span>
+                        <span class="precio">12,00€</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Vieiras del mar</span>
+                        <span class="precio">15,00€</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Chipirones</span>
+                        <span class="precio">15,00€</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between plato plato-recomendado">
+                        <span><span class="bullet"></span><span class="badge-recomendado">Tártaro de salmón</span></span>
+                        <span class="precio">17,00€</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- POSTRES -->
+        <!-- ============================================= -->
+        <div class="tab-pane fade" id="postres" role="tabpanel">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Flan (caramelo)</span>
+                        <span class="precio">4,50€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Sorbete de limón con cava o vodka</span>
+                        <span class="precio">5,50€</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Cheesecake</span>
+                        <span class="precio">5,50€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Coulant de chocolate</span>
+                        <span class="precio">5,50€</span>
+                    </div>
+                    <div class="d-flex justify-content-between plato">
+                        <span><span class="bullet"></span>Pancakes (frutas y sirope)</span>
+                        <span class="precio">5,50€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="drinks" class="menu">
+        <h2 class="titulo-menu">Nuestras bebidas</h2>
+            <ul class="nav justify-content-center gap-4 menu-tabs" id="drinksTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="coctail-tab" data-bs-toggle="tab" data-bs-target="#coctail" type="button" role="tab">
+                        <img src="img/iconos/drink.png" alt="Cocteles" class="menu-icon">
+                        <span class="texto_platos">Cócteles</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="vinos-tab" data-bs-toggle="tab" data-bs-target="#vinos" type="button" role="tab">
+                        <img src="img/iconos/cheers.png" alt="Vinos" class="menu-icon">
+                        <span class="texto_platos">Vinos</span>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="drinksTabContent">
+                <!-- ============================================= -->
+                <!-- CÓCTELES -->
+                <!-- ============================================= -->
+                <div class="tab-pane fade show active" id="coctail" role="tabpanel">
+                    <div class="row gx-5">
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-between plato">
+                                <div>
+                                    <span><span class="bullet"></span>Mojito</span>
+                                    <div class="plato-desc">Ron, lima, hierbabuena, azúcar, soda y hielo picado.</div>
+                                </div>
+                                <span class="precio">8,50€</span>
+                            </div>
+                            <div class="d-flex justify-content-between plato">
+                                <div>
+                                    <span><span class="bullet"></span>Piña Colada</span>
+                                    <div class="plato-desc">Ron, piña, coco y crema de coco.</div>
+                                </div>
+                                <span class="precio">9,50€</span>
+                            </div>
+                            <div class="d-flex justify-content-between plato">
+                                <div>
+                                    <span><span class="bullet"></span>Aperol Spritz</span>
+                                    <div class="plato-desc">Aperol, cava, soda y rodaja de naranja.</div>
+                                </div>
+                                <span class="precio">8,00€</span>
+                            </div>
+                            <div class="d-flex justify-content-between plato">
+                                <div>
+                                    <span><span class="bullet"></span>Aperol Pomelo</span>
+                                    <div class="plato-desc">Aperol, pomelo, cava, soda y rodaja de pomelo.</div>
+                                </div>
+                                <span class="precio">8,50€</span>
+                            </div>
+                            <div class="d-flex justify-content-between plato">
+                                <div>
+                                    <span><span class="bullet"></span>Margarita</span>
+                                    <div class="plato-desc">Tequila, triple sec, lima y sal en el borde.</div>
+                                </div>
+                                <span class="precio">10,00€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-between plato">
+                                <div>
+                                    <span><span class="bullet"></span>Hugo</span>
+                                    <div class="plato-desc">Licor de flor de saúco, cava, soda, menta y lima.</div>
+                                </div>
+                                <span class="precio">8,50€</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between plato">
+                                <div>
+                                    <span><span class="bullet"></span>Cuba Libre</span>
+                                    <div class="plato-desc">Ron, lima y cola.</div>
+                                </div>
+                                <span class="precio">8,50€</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between plato">
+                                <span><span class="bullet"></span>Sangría</span>
+                                <span class="precio">6€</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between plato">
+                                <span><span class="bullet"></span>Jarra Sangría</span>
+                                <span class="precio">18€</span>
+                            </div>
+                                
+                            <div class="d-flex justify-content-between plato">
+                                <span><span class="bullet"></span>Tinto de Verano</span>
+                                <span class="precio">5€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================= -->
+                <!-- VINOS -->
+                <!-- ============================================= -->
+                <div class="tab-pane fade" id="vinos" role="tabpanel">
+                    <div class="row gx-5">
+                        <div class="col-md-6">
+
+                            <h4 class="vino-categoria">Vino Tinto</h4>
+                            <table class="vino-tabla">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Copa</th>
+                                        <th>Botella</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sebastià Pastor Anyada Negre · Mallorquín</td>
+                                        <td>4,50€</td>
+                                        <td>21,50€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rioja Lar de Paula</td>
+                                        <td>4,50€</td>
+                                        <td>23,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ribera del Duero Dorium Roble</td>
+                                        <td>4,50€</td>
+                                        <td>22,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baigorri Rioja Tempranillo</td>
+                                        <td>—</td>
+                                        <td>27,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pesquera Crianza</td>
+                                        <td>—</td>
+                                        <td>31,50€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ribera del Duero Matarromera</td>
+                                        <td>—</td>
+                                        <td>33,00€</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h4 class="vino-categoria">Vino Rosado</h4>
+                            <table class="vino-tabla">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Copa</th>
+                                        <th>Botella</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sebastià Pastor Rosat de Negre · Mallorquín</td>
+                                        <td>4,50€</td>
+                                        <td>21,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lar de Paula Rosado</td>
+                                        <td>4,50€</td>
+                                        <td>19,00€</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <h4 class="vino-categoria">Vino Blanco</h4>
+                            <table class="vino-tabla">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Copa</th>
+                                        <th>Botella</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sebastià Pastor Prensal · Mallorquín</td>
+                                        <td>4,50€</td>
+                                        <td>22,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Verdejo Entre Flores</td>
+                                        <td>4,50€</td>
+                                        <td>18,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mar de Ons Albariño</td>
+                                        <td>4,50€</td>
+                                        <td>20,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mar de Ons Mangum</td>
+                                        <td>—</td>
+                                        <td>38,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pulpo Albariño</td>
+                                        <td>4,50€</td>
+                                        <td>25,00€</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h4 class="vino-categoria">Cava</h4>
+                            <table class="vino-tabla">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Copa</th>
+                                        <th>Botella</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Codorniu Anna Brut</td>
+                                        <td>4,50€</td>
+                                        <td>21,00€</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script src="js/navbar.js"></script>
+
+    <div id="footer-container"></div>
+    <script src="js/footer.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

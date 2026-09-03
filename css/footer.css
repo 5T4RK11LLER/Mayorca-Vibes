@@ -1,0 +1,76 @@
+@import url(roots.css);
+
+.footer-mallorca {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.5rem;
+    font-family: var(--font-seconday);
+}
+
+.footer-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.footer-copyright em {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.footer-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 3rem;
+    height: 3rem;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-contact a {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: var(--contast-color);
+}
+
+
+.footer-mallorca a:hover {
+    color: var(--contast-color);
+}
+
+
+@media (max-width: 767.98px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        position: static;
+        transform: none;
+        order: -1;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

@@ -1,0 +1,123 @@
+@import url(roots.css);
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; 
+    background-color: var(--primary-color) !important;
+    transition: background-color 0.3s ease;
+}
+
+.logo-img{
+    width: 4rem !important; 
+    height: 4rem !important; 
+    display: inline-block;
+}
+
+.navbrand-text{
+    font-family: var(--font-primary);
+    color: var(--secondary-color) !important;
+    font-size: 1.9rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.1rem;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.nav-link{
+    color: var(--secondary-color) !important;
+    font-family: var(--font-seconday) !important;
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+}
+
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--contast-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.btn-reserva{
+    color: var(--primary-color);
+    background-color: var(--contast-color) !important;
+    font-family: var(--font-seconday) !important;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 0;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-reserva:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 14px rgba(20, 46, 34, 0.45);
+    background-color: #e0b82f !important;
+}
+
+.btn-reserva:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px rgba(20, 46, 34, 0.4);
+}
+
+.navbar-toggler-icon {
+    background-image: url("../img/iconos/caracol-de-mar.png") !important;
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    transform: rotate(90deg);
+}
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        gap: 10rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+}

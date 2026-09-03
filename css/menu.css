@@ -1,0 +1,337 @@
+#body{
+    background-color: var(--secondary-color);
+    padding-top: 6.25rem;
+    font-family: var(--font-seconday);
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+#food{
+    padding-bottom: 0;
+}
+
+.titulo-menu{
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 2.4rem;
+}
+
+.titulo-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.titulo-menu::before,
+.titulo-menu::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--primary-color);
+    max-width: 20rem; 
+}
+
+.menu-tabs {
+    border: none;
+    list-style: none;
+}
+
+.menu-tabs .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-family: var(--font-seconday);
+    padding: 0.5rem;
+    position: relative;
+}
+
+.menu-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.menu-tabs .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu-tabs .nav-link.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.texto_platos {
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+#menuTabContent{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#drinksTabContent{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.bullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.plato-recomendado .bullet {
+    display: none;
+}
+
+.badge-recomendado {
+    color: var(--contast-color);
+    font-weight: 700;
+}
+
+.badge-recomendado::before {
+    content: "★";
+    display: inline-block;
+    width: 10px;
+    margin-right: 1rem;
+    margin-left: -0.4rem;
+    text-align: center;
+    color: var(--contast-color);
+}
+
+.plato {
+    border-bottom: 1px dotted #ccc;
+    padding: 0.6rem 0;
+}
+
+.menu {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+@media (max-width: 576px) {
+    .menu {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.plato-desc {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #8a8a8a;
+    margin-top: 0.15rem;
+}
+
+.vino-categoria {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2rem ;
+}
+
+.vino-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.vino-tabla th {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #8a8a8a;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.vino-tabla th:first-child {
+    text-align: left;
+}
+
+.vino-tabla td {    
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 1.25rem;
+}
+
+.vino-tabla td:not(:first-child) {
+    text-align: right;
+    white-space: nowrap;
+    padding-left: 1rem;
+    width: 80px;
+}
+
+.sangria-box .plato {
+    border-bottom: none;
+}
+
+/* ============================================= */
+/* RESPONSIVE                                     */
+/* ============================================= */
+
+.plato {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+}
+
+.plato .precio {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    #body {
+        padding-top: 5rem;
+        font-size: 1.1rem;
+    }
+
+    .titulo-menu {
+        font-size: 1.8rem;
+        gap: 0.5rem;
+    }
+
+    .titulo-menu::before,
+    .titulo-menu::after {
+        max-width: 3rem;
+    }
+
+    .menu-tabs {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.5rem;
+        margin: 0 -1.25rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        gap: 1.5rem !important;
+        scrollbar-width: thin;
+    }
+
+    .menu-tabs::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .menu-tabs::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+        border-radius: 4px;
+        opacity: 0.5;
+    }
+
+    .menu-tabs .nav-link {
+        flex: 0 0 auto;
+        padding: 0.3rem;
+    }
+
+    .menu-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .texto_platos {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .menu {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    #menuTabContent,
+    #drinksTabContent {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .vino-categoria {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .vino-tabla td,
+    .vino-tabla th {
+        font-size: 0.95rem;
+    }
+
+    .vino-tabla td:not(:first-child),
+    .vino-tabla th:not(:first-child) {
+        width: 60px;
+        padding-left: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #body {
+        font-size: 1rem;
+        padding-top: 4.5rem;
+    }
+
+    .titulo-menu {
+        font-size: 1.4rem;
+        gap: 0.4rem;
+    }
+
+    .titulo-menu::before,
+    .titulo-menu::after {
+        max-width: 1.75rem;
+    }
+
+    .menu {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .menu-icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .texto_platos {
+        font-size: 0.7rem;
+    }
+
+    .plato {
+        padding: 0.5rem 0;
+    }
+
+    .plato-desc {
+        font-size: 0.78rem;
+    }
+
+    .vino-categoria {
+        font-size: 1.25rem;
+    }
+
+    .vino-tabla td,
+    .vino-tabla th {
+        font-size: 0.8rem;
+    }
+
+    .vino-tabla td:not(:first-child),
+    .vino-tabla th:not(:first-child) {
+        width: 50px;
+        padding-left: 0.3rem;
+    }
+}
