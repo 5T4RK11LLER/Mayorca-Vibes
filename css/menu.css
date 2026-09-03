@@ -49,7 +49,7 @@
     border: none;
     color: var(--primary-color);
     font-family: var(--font-seconday);
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.75rem;
     position: relative;
 }
 
@@ -61,7 +61,7 @@
 .menu-tabs .nav-link::after {
     content: "";
     position: absolute;
-    bottom: -4px;
+    bottom: 0;
     left: 50%;
     width: 0;
     height: 2px;
@@ -200,83 +200,6 @@
     white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-    #body {
-        padding-top: 7rem;
-        font-size: 1.1rem;
-    }
-
-    .titulo-menu {
-        font-size: 1.8rem;
-        gap: 0.5rem;
-    }
-
-    .titulo-menu::before,
-    .titulo-menu::after {
-        max-width: 6rem;
-    }
-
-    .menu-tabs {
-        flex-wrap: nowrap !important;
-        justify-content: flex-start !important;
-        overflow-x: auto;
-        padding-bottom: 0.5rem;
-        margin: 0 ;
-        padding-left: 1.75rem;
-        padding-right: 1.25rem;
-        gap: 1.5rem !important;
-        scrollbar-width: thin;
-    }
-
-    .menu-tabs .nav-item {
-        flex: 0 0 auto;
-    }
-
-    .menu-tabs .nav-link {
-        padding: 0.3rem;
-    }
-
-    #drinksTab {
-        justify-content: center !important;
-    }
-
-    .menu-icon {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .texto_platos {
-        font-size: 0.75rem;
-        white-space: nowrap;
-    }
-
-    .menu {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-    }
-
-    #menuTabContent,
-    #drinksTabContent {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-
-    .vino-categoria {
-        font-size: 1.5rem;
-        margin-top: 1rem;
-    }
-
-    .vino-tabla td,
-    .vino-tabla th {
-        font-size: 0.95rem;
-    }
-
-    .vino-tabla td:not(:first-child),
-    .vino-tabla th:not(:first-child) {
-        width: 60px;
-        padding-left: 0.5rem;
-    }
-}
 
 @media (max-width: 480px) {
     
@@ -332,3 +255,107 @@
         padding-left: 0.3rem;
     }
 }
+
+@media (max-width: 576px) {
+    #body {
+        padding-top: 7rem;
+        font-size: 1.1rem;
+    }
+
+    .titulo-menu {
+        font-size: 1.8rem;
+        gap: 0.5rem;
+    }
+
+    .titulo-menu::before,
+    .titulo-menu::after {
+        max-width: 6rem;
+    }
+
+    .menu-tabs {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        margin: 0 ;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        gap: 1.5rem !important;
+        scrollbar-width: thin;
+    }
+
+    .menu-tabs .nav-item {
+        flex: 0 0 auto;
+    }
+
+    .menu-tabs .nav-link {
+        padding: 0.3rem;
+    }
+
+    #drinksTab {
+        justify-content: center !important;
+    }
+
+    .menu-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .texto_platos {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .menu {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    #menuTabContent,
+    #drinksTabContent {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .vino-categoria {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .vino-tabla td,
+    .vino-tabla th {
+        font-size: 0.95rem;
+    }
+
+    .vino-tabla td:not(:first-child),
+    .vino-tabla th:not(:first-child) {
+        width: 60px;
+        padding-left: 0.5rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1024px) {
+    .menu-tabs {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        overflow-x: visible;
+        gap: 1rem;
+    }
+
+    .menu-tabs .nav-item {
+        flex: 0 0 auto;
+    }
+
+    #drinksTab {
+        justify-content: center !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .menu-tabs {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        overflow-x: visible;
+    }
+}
+
