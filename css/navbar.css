@@ -105,19 +105,71 @@
     box-shadow: none !important;
 }
 
-@media (min-width: 992px) {
+/* ===== Desktop grande (>=1200px) ===== */
+@media (min-width: 1200px) {
     .navbar-nav {
-        gap: 10rem;
+        gap: 8rem;
     }
 }
 
+/* ===== Desktop / laptop mediano (992px - 1199.98px) ===== */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-nav {
+        gap: 3rem;
+    }
+
+    .navbrand-text {
+        font-size: 1.6rem !important;
+    }
+}
+
+/* ===== Menú colapsado: tablet y móvil (<992px) ===== */
 @media (max-width: 991.98px) {
     .navbar-nav {
         align-items: center;
         text-align: center;
+        gap: 1.25rem;
     }
 
     .navbar-collapse {
         text-align: center;
+    }
+
+    .btn-reserva {
+        margin-top: 0.5rem;
+        width: fit-content;
+    }
+}
+
+/* ===== Tablets pequeñas / móviles grandes (<=576px) ===== */
+@media (max-width: 576px) {
+    .logo-img {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .navbrand-text {
+        font-size: 1.4rem !important;
+    }
+
+    .nav-link {
+        font-size: 1.1rem !important;
+    }
+
+    .btn-reserva {
+        font-size: 1rem !important;
+        padding: 0.4rem 0.9rem;
+    }
+}
+
+/* ===== Móviles muy pequeños (<=360px) ===== */
+@media (max-width: 360px) {
+    .navbrand-text {
+        font-size: 1.15rem !important;
+    }
+
+    .logo-img {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
     }
 }
