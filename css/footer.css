@@ -61,6 +61,7 @@
     .footer-inner {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .footer-logo {
@@ -69,8 +70,14 @@
         order: -1;
     }
 
+    .footer-contact li > div {
+        justify-content: center;
+    }
+
     .footer-right {
         flex-direction: column;
-        gap: 0.5rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 }
