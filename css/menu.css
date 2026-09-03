@@ -217,32 +217,34 @@
     }
 
     .menu-tabs {
-        flex-wrap: nowrap !important;
-        justify-content: flex-start !important;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 0.5rem;
-        margin: 0 -1rem;
-        padding-left: 1.75rem;
-        padding-right: 1.25rem;
-        gap: 1.5rem !important;
-        scrollbar-width: thin;
-    }
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    margin: 0 -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 1.5rem !important;
+    scrollbar-width: thin;
+}
 
-    .menu-tabs::-webkit-scrollbar {
-        height: 4px;
-    }
+.menu-tabs::-webkit-scrollbar {
+    height: 4px;
+}
 
-    .menu-tabs::-webkit-scrollbar-thumb {
-        background-color: var(--primary-color);
-        border-radius: 4px;
-        opacity: 0.5;
-    }
+.menu-tabs::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    opacity: 0.5;
+}
 
-    .menu-tabs .nav-link {
-        flex: 0 0 auto;
-        padding: 0.3rem;
-    }
+.menu-tabs .nav-item {
+    flex: 0 0 auto;
+}
+
+.menu-tabs .nav-link {
+    padding: 0.3rem;
+}
 
     .menu-icon {
         width: 2rem;
