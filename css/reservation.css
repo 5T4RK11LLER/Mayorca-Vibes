@@ -1,0 +1,254 @@
+#body {
+  margin-top: 5rem; 
+  background-color: var(--secondary-color);
+  font-family: var(--font-seconday);
+  color: var(--primary-color);
+}
+
+/* ==========================================================
+   1. WRAPPER — Reserva + Ubicación lado a lado
+   ========================================================== */
+.reservation-location-wrapper { 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
+}
+
+.reservation-section,
+.location-section {
+  flex: 1 1 450px;
+}
+
+.reservation-section {
+  align-self: center;
+}
+
+/* ==========================================================
+   2. TÍTULOS Y SUBTÍTULOS (compartidos por ambas secciones)
+   ========================================================== */
+.reservation-section h2,
+.location-section h2 {
+  font-family: var(--font-primary);
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.reservation-section p,
+.location-section p {
+  font-family: var(--font-seconday);
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+/* ==========================================================
+   3. FORMULARIO DE RESERVA
+   ========================================================== */
+.reservation-section .form-label {
+  font-family: var(--font-seconday);
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.reservation-section .form-control {
+  font-family: var(--font-seconday);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  color: var(--primary-color);
+  padding: 10px 14px;
+}
+
+.reservation-section .form-control::placeholder {
+  color: #9a9a8f;
+}
+
+.reservation-section .form-control:focus {
+  border-color: var(--contast-color);
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(255, 201, 56, 0.25);
+}
+
+/* ---- Selector de número de personas ---- */
+.reservation-section .input-group .btn-outline-secondary {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.reservation-section .input-group .btn-outline-secondary:hover {
+  background-color: var(--contast-color);
+  border-color: var(--contast-color);
+  color: var(--primary-color);
+}
+
+.reservation-section .input-group #numPersonas {
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  border-left: none;
+  border-right: none;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   4. BOTÓN DORADO (compartido: Reservar / Cómo llegar)
+   ========================================================== */
+.reservation-section .btn-primary,
+.location-section .btn-primary {
+  background-color: var(--contast-color);
+  border: none;
+  color: var(--primary-color);
+  font-family: var(--font-seconday);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 40px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.reservation-section .btn-primary:hover,
+.location-section .btn-primary:hover {
+  background-color: #e0b52e;
+  color: var(--primary-color);
+}
+
+/* ==========================================================
+   5. SECCIÓN DE UBICACIÓN — mapa
+   ========================================================== */
+.map-container {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+/* ==========================================================
+   6. FLATPICKR — Calendario (fecha)
+   ========================================================== */
+.flatpickr-calendar {
+  font-family: var(--font-seconday);
+  border-radius: 8px;
+  background-color: var(--secondary-color) !important;
+  border: 2px solid var(--primary-color) !important;
+}
+
+.flatpickr-day:hover {
+  background: var(--contast-color) !important;
+  border-color: var(--contast-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.selected:hover {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.flatpickr-day.today {
+  border-color: var(--contast-color) !important;
+}
+
+/* Flecha del calendario (apunta hacia el input) */
+.flatpickr-calendar.arrowTop:before {
+  border-bottom-color: var(--primary-color) !important;
+}
+.flatpickr-calendar.arrowTop:after {
+  border-bottom-color: var(--secondary-color) !important;
+}
+.flatpickr-calendar.arrowBottom:before {
+  border-top-color: var(--primary-color) !important;
+}
+.flatpickr-calendar.arrowBottom:after {
+  border-top-color: var(--secondary-color) !important;
+}
+
+/* Selector de mes (texto estático, ver selectDate.js -> monthSelectorType: "static") */
+.flatpickr-current-month .cur-month {
+  font-family: var(--font-seconday);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.flatpickr-current-month input.cur-year {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+  background: transparent;
+}
+
+/* Flechas de mes anterior / siguiente (son SVG, no texto) */
+.flatpickr-months .flatpickr-prev-month svg,
+.flatpickr-months .flatpickr-next-month svg {
+  fill: var(--primary-color);
+}
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+  fill: var(--contast-color);
+}
+
+/* ==========================================================
+   7. FLATPICKR — Selector de hora
+   ========================================================== */
+.flatpickr-time {
+  font-family: var(--font-seconday);
+  background-color: var(--secondary-color);
+  border-top: 1px solid var(--primary-color);
+}
+
+.flatpickr-time input {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: transparent;
+}
+
+.flatpickr-time input:hover,
+.flatpickr-time input:focus {
+  background: var(--contast-color) !important;
+  outline: none;
+}
+
+.flatpickr-time .flatpickr-time-separator {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Flechitas de subir/bajar hora y minuto (hechas con border, no SVG) */
+.flatpickr-time .numInputWrapper span.arrowUp:after {
+  border-bottom-color: var(--primary-color);
+}
+.flatpickr-time .numInputWrapper span.arrowDown:after {
+  border-top-color: var(--primary-color);
+}
+.flatpickr-time .numInputWrapper:hover {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+/* ==========================================================
+   8. RESPONSIVE
+   ========================================================== */
+@media (max-width: 991px) {
+  .reservation-section {
+    align-self: auto; /* en pantallas chicas, apiladas, no tiene sentido centrar verticalmente */
+  }
+}
