@@ -1,5 +1,5 @@
 #body {
-  margin-top: 5rem; 
+  margin-top: 5rem;
   background-color: var(--secondary-color);
   font-family: var(--font-seconday);
   color: var(--primary-color);
@@ -8,7 +8,7 @@
 /* ==========================================================
    1. WRAPPER — Reserva + Ubicación lado a lado
    ========================================================== */
-.reservation-location-wrapper { 
+#reserva-ubicacion {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -18,20 +18,20 @@
   padding: 60px 20px 40px;
 }
 
-.reservation-section,
-.location-section {
+#reservation,
+#ubicacion {
   flex: 1 1 450px;
 }
 
-.reservation-section {
+#reservation {
   align-self: center;
 }
 
 /* ==========================================================
-   2. TÍTULOS Y SUBTÍTULOS (compartidos por ambas secciones)
+   2. TÍTULOS Y SUBTÍTULOS
    ========================================================== */
-.reservation-section h2,
-.location-section h2 {
+#reservation-title,
+#location-title {
   font-family: var(--font-primary);
   color: var(--primary-color);
   font-size: 3rem;
@@ -40,8 +40,8 @@
   margin-bottom: 10px;
 }
 
-.reservation-section p,
-.location-section p {
+#reservation-subtitle,
+#location-subtitle {
   font-family: var(--font-seconday);
   color: var(--primary-color);
   text-align: center;
@@ -54,7 +54,10 @@
 /* ==========================================================
    3. FORMULARIO DE RESERVA
    ========================================================== */
-.reservation-section .form-label {
+#label-name,
+#label-date,
+#label-time,
+#label-guests {
   font-family: var(--font-seconday);
   color: var(--primary-color);
   letter-spacing: 0.5px;
@@ -62,7 +65,10 @@
   margin-bottom: 6px;
 }
 
-.reservation-section .form-control {
+#inputName,
+#fecha,
+#hora,
+#numPersonas {
   font-family: var(--font-seconday);
   background-color: var(--secondary-color);
   border: 1px solid var(--primary-color);
@@ -71,43 +77,61 @@
   padding: 10px 14px;
 }
 
-.reservation-section .form-control::placeholder {
+#inputName::placeholder,
+#fecha::placeholder,
+#hora::placeholder {
   color: #9a9a8f;
 }
 
-.reservation-section .form-control:focus {
+#inputName:focus,
+#fecha:focus,
+#hora:focus {
   border-color: var(--contast-color);
   background-color: var(--secondary-color);
   box-shadow: 0 0 0 3px rgba(255, 201, 56, 0.25);
 }
 
-/* ---- Selector de número de personas ---- */
-.reservation-section .input-group .btn-outline-secondary {
+/* ---- Steppers: hora y número de personas ---- */
+#btnHoraMenos,
+#btnHoraMas,
+#btnMenos,
+#btnMas {
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
   color: var(--secondary-color);
   font-weight: 600;
 }
 
-.reservation-section .input-group .btn-outline-secondary:hover {
+#btnHoraMenos:hover,
+#btnHoraMas:hover,
+#btnMenos:hover,
+#btnMas:hover {
   background-color: var(--contast-color);
   border-color: var(--contast-color);
   color: var(--primary-color);
 }
 
-.reservation-section .input-group #numPersonas {
+#btnHoraMenos:disabled,
+#btnHoraMas:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+#hora,
+#numPersonas {
   border-top: 1px solid var(--primary-color);
   border-bottom: 1px solid var(--primary-color);
   border-left: none;
   border-right: none;
   font-weight: 600;
+  text-align: center;
 }
 
 /* ==========================================================
-   4. BOTÓN DORADO (compartido: Reservar / Cómo llegar)
+   4. BOTÓN DORADO (Reservar / Cómo llegar)
    ========================================================== */
-.reservation-section .btn-primary,
-.location-section .btn-primary {
+#btnReservar,
+#btnComoLlegar {
   background-color: var(--contast-color);
   border: none;
   color: var(--primary-color);
@@ -120,8 +144,8 @@
   transition: background-color 0.2s ease-in-out;
 }
 
-.reservation-section .btn-primary:hover,
-.location-section .btn-primary:hover {
+#btnReservar:hover,
+#btnComoLlegar:hover {
   background-color: #e0b52e;
   color: var(--primary-color);
 }
@@ -129,14 +153,14 @@
 /* ==========================================================
    5. SECCIÓN DE UBICACIÓN — mapa
    ========================================================== */
-.map-container {
+#map-container {
   border: 2px solid var(--primary-color);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 30px;
 }
 
-.map-container iframe {
+#map-frame {
   display: block;
   width: 100%;
   height: 400px;
@@ -145,6 +169,8 @@
 /* ==========================================================
    6. FLATPICKR — Calendario (fecha)
    ========================================================== */
+/* Estos elementos los genera la librería Flatpickr dinámicamente
+   y no tienen id propio asignable, por eso siguen por clase. */
 .flatpickr-calendar {
   font-family: var(--font-seconday);
   border-radius: 8px;
@@ -168,7 +194,6 @@
   border-color: var(--contast-color) !important;
 }
 
-/* Flecha del calendario (apunta hacia el input) */
 .flatpickr-calendar.arrowTop:before {
   border-bottom-color: var(--primary-color) !important;
 }
@@ -182,7 +207,6 @@
   border-top-color: var(--secondary-color) !important;
 }
 
-/* Selector de mes (texto estático, ver selectDate.js -> monthSelectorType: "static") */
 .flatpickr-current-month .cur-month {
   font-family: var(--font-seconday);
   color: var(--primary-color);
@@ -195,7 +219,6 @@
   background: transparent;
 }
 
-/* Flechas de mes anterior / siguiente (son SVG, no texto) */
 .flatpickr-months .flatpickr-prev-month svg,
 .flatpickr-months .flatpickr-next-month svg {
   fill: var(--primary-color);
@@ -206,49 +229,10 @@
 }
 
 /* ==========================================================
-   7. FLATPICKR — Selector de hora
-   ========================================================== */
-.flatpickr-time {
-  font-family: var(--font-seconday);
-  background-color: var(--secondary-color);
-  border-top: 1px solid var(--primary-color);
-}
-
-.flatpickr-time input {
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 1.1rem;
-  background: transparent;
-}
-
-.flatpickr-time input:hover,
-.flatpickr-time input:focus {
-  background: var(--contast-color) !important;
-  outline: none;
-}
-
-.flatpickr-time .flatpickr-time-separator {
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
-/* Flechitas de subir/bajar hora y minuto (hechas con border, no SVG) */
-.flatpickr-time .numInputWrapper span.arrowUp:after {
-  border-bottom-color: var(--primary-color);
-}
-.flatpickr-time .numInputWrapper span.arrowDown:after {
-  border-top-color: var(--primary-color);
-}
-.flatpickr-time .numInputWrapper:hover {
-  background: var(--secondary-color);
-  border-radius: 4px;
-}
-
-/* ==========================================================
-   8. RESPONSIVE
+   7. RESPONSIVE
    ========================================================== */
 @media (max-width: 991px) {
-  .reservation-section {
-    align-self: auto; /* en pantallas chicas, apiladas, no tiene sentido centrar verticalmente */
+  #reservation {
+    align-self: auto;
   }
 }
