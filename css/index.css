@@ -25,24 +25,6 @@
     gap: 2.5rem;
 }
 
-#title-hero-section{
-    margin: 0;
-    font-family: var(--font-primary);
-    font-weight: 400;
-    font-size: clamp(3.5rem, 15vw, 8.5rem);
-    line-height: 1.2;
-    color: var(--primary-color);
-    -webkit-text-stroke: 2px var(--secondary-color );
-    text-shadow: 0 4px 20px rgba(0,0,0,0.25);
-}
-
-#title-hero-section .line-2{
-    display: block;
-    margin-left: 75%;
-    margin-top: -0.5rem;
-}
-
-
 .hero-buttons{
     display: flex;
     gap: 1.5rem;
@@ -261,16 +243,6 @@
         padding: 0 5vw 7vh;
     }
 
-    #title-hero-section{
-        font-size: clamp(3rem, 18vw, 10rem);
-        -webkit-text-stroke: 1.75px var(--secondary-color);
-        margin-bottom: 5rem;
-    }
-
-    #title-hero-section .line-2{
-        margin-left: 45%;
-    }
-
     .hero-buttons{
         gap: 1.25rem;
     }
@@ -284,18 +256,6 @@
 @media (max-width: 560px){
     #hero-section{
         padding: 0 6vw 8vh;
-    }
-
-    #title-hero-section{
-        font-size: clamp(2.75rem, 25vw, 10rem);
-        -webkit-text-stroke: 1.5px var(--secondary-color);
-        text-align: center;
-        padding-bottom: 5rem;
-    }
-
-    #title-hero-section .line-2{
-        margin-left: 0;
-        margin-top: 0;
     }
 
     .hero-content{
