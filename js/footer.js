@@ -2,23 +2,31 @@ async function loadFooter() {
   const container = document.getElementById('footer-container');
   if (!container) return;
 
-  // Guardar referencia ANTES del await
-  const scriptSrc = document.currentScript ? document.currentScript.src : window.location.href;
-  const footerUrl = new URL('../html/footer.html', scriptSrc).href;
+  const isInSubfolder = window.location.pathname.includes('/html/');
+  const footerPath = isInSubfolder ? 'footer.html' : 'html/footer.html';
 
   try {
-    const response = await fetch(footerUrl);
-    if (!response.ok) throw new Error('Error en HTTP');
+    const response = await fetch(footerPath);
+    if (!response.ok) throw new Error('No se pudo cargar el footer');
+
     const html = await response.text();
+    container.innerHTML = html;
 
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const content = doc.querySelector('body') ? doc.querySelector('body').innerHTML : html;
-
-    container.innerHTML = content;
+    adjustFooterPaths(container, isInSubfolder);
   } catch (error) {
-    console.error('No se pudo cargar el footer:', error);
+    console.error('Error:', error);
   }
+}
+
+function adjustFooterPaths(container, isInSubfolder) {
+  const imgs = container.querySelectorAll('img');
+  imgs.forEach(img => {
+    let src = img.getAttribute('src');
+    if (!src) return;
+    if (!isInSubfolder && src.startsWith('../')) {
+      img.setAttribute('src', src.replace('../', ''));
+    }
+  });
 }
 
 loadFooter();
