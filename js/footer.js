@@ -2,17 +2,23 @@ async function loadFooter() {
   const container = document.getElementById('footer-container');
   if (!container) return;
 
-  // Resuelve footer.html relativo a la ubicación real de este script (js/)
-  const footerUrl = new URL('../html/footer.html', document.currentScript.src).href;
+  // Guardar referencia ANTES del await
+  const scriptSrc = document.currentScript ? document.currentScript.src : window.location.href;
+  const footerUrl = new URL('../html/footer.html', scriptSrc).href;
 
-  const response = await fetch(footerUrl);
-  if (!response.ok) {
-    console.error('No se pudo cargar el footer');
-    return;
+  try {
+    const response = await fetch(footerUrl);
+    if (!response.ok) throw new Error('Error en HTTP');
+    const html = await response.text();
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const content = doc.querySelector('body') ? doc.querySelector('body').innerHTML : html;
+
+    container.innerHTML = content;
+  } catch (error) {
+    console.error('No se pudo cargar el footer:', error);
   }
-
-  const html = await response.text();
-  container.innerHTML = html;
 }
 
 loadFooter();
