@@ -1,7 +1,7 @@
 @import url(roots.css);
 
 #body{
-    margin-top:5rem;
+    margin-top: 4rem;
     background-color: var(--secondary-color);
 }
 
@@ -15,6 +15,7 @@
     align-items: flex-end;
     padding: 0 4vw 6vh;
     position: relative;
+    overflow: hidden;
 }
 
 .hero-content{
